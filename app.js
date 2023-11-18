@@ -19,7 +19,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/hanoi', indexRouter);
+app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
 // catch 404 and forward to error handler
@@ -42,7 +42,7 @@ const port = process.env.PORT || 3001;  // thiết lập lại port để có th
 const host = 'localhost';
 
 app.listen(port, ()=>{
-  console.log('server is running at http://'+host+':'+port+'/hanoi')
+  console.log('server is running at http://'+host+':'+port)
 
 }) // dùng để nghe cổng
 
